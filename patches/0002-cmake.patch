@@ -1,0 +1,139 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 4f0f8be5..42a4bbd3 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -13,7 +13,7 @@ project(${PROJECT_NAME} VERSION ${PROJECT_VERSION} LANGUAGES C)
+ 
+ option(BUILD_SERVER "Build dedicated server" ON)
+ option(BUILD_CLIENT "Build client" ON)
+-option(BUILD_RENDERER_GL1 "Build GL1 renderer" ON)
++option(BUILD_RENDERER_GL1 "Build GL1 renderer" OFF)
+ option(BUILD_RENDERER_GL2 "Build GL2 renderer" ON)
+ option(BUILD_GAME_LIBRARIES "Build game module libraries" ON)
+ option(BUILD_GAME_QVMS "Build game module qvms" ON)
+@@ -97,11 +97,12 @@ include(platforms/all)
+ include(libraries/all)
+ 
+ include(server)
+-include(renderer_gl1)
++# include(renderer_gl1)
+ include(renderer_gl2)
+ include(client)
+ include(basegame)
+-include(missionpack)
++include(runtime)
++# include(missionpack)
+ 
+ include(post_configure)
+ include(installer)
+diff --git a/cmake/basegame.cmake b/cmake/basegame.cmake
+index 8a45bfca..29a360bf 100644
+--- a/cmake/basegame.cmake
++++ b/cmake/basegame.cmake
+@@ -5,6 +5,8 @@ endif()
+ include(utils/qvm_tools)
+ include(utils/set_output_dirs)
+ 
++set(ORION_GAME_DIR ${CMAKE_SOURCE_DIR}/../game)
++
+ set(CGAME_SOURCES
+     ${SOURCE_DIR}/cgame/cg_main.c
+     ${SOURCE_DIR}/game/bg_misc.c
+@@ -72,51 +74,56 @@ set(GAME_BINARY_SOURCES ${SOURCE_DIR}/game/g_syscalls.c)
+ set(GAME_QVM_SOURCES ${SOURCE_DIR}/game/g_syscalls.asm)
+ 
+ set(UI_SOURCES
+-    ${SOURCE_DIR}/q3_ui/ui_main.c
+-    ${SOURCE_DIR}/game/bg_misc.c
++    ${ORION_GAME_DIR}/ui/ui_main.c
++    ${ORION_GAME_DIR}/ui/ui_sys.c
+     ${SOURCE_DIR}/game/bg_lib.c
+-    ${SOURCE_DIR}/q3_ui/ui_addbots.c
+-    ${SOURCE_DIR}/q3_ui/ui_atoms.c
+-    ${SOURCE_DIR}/q3_ui/ui_cdkey.c
+-    ${SOURCE_DIR}/q3_ui/ui_cinematics.c
+-    ${SOURCE_DIR}/q3_ui/ui_confirm.c
+-    ${SOURCE_DIR}/q3_ui/ui_connect.c
+-    ${SOURCE_DIR}/q3_ui/ui_controls2.c
+-    ${SOURCE_DIR}/q3_ui/ui_credits.c
+-    ${SOURCE_DIR}/q3_ui/ui_demo2.c
+-    ${SOURCE_DIR}/q3_ui/ui_display.c
+-    ${SOURCE_DIR}/q3_ui/ui_gameinfo.c
+-    ${SOURCE_DIR}/q3_ui/ui_ingame.c
+-    ${SOURCE_DIR}/q3_ui/ui_loadconfig.c
+-    ${SOURCE_DIR}/q3_ui/ui_menu.c
+-    ${SOURCE_DIR}/q3_ui/ui_mfield.c
+-    ${SOURCE_DIR}/q3_ui/ui_mods.c
+-    ${SOURCE_DIR}/q3_ui/ui_network.c
+-    ${SOURCE_DIR}/q3_ui/ui_options.c
+-    ${SOURCE_DIR}/q3_ui/ui_playermodel.c
+-    ${SOURCE_DIR}/q3_ui/ui_players.c
+-    ${SOURCE_DIR}/q3_ui/ui_playersettings.c
+-    ${SOURCE_DIR}/q3_ui/ui_preferences.c
+-    ${SOURCE_DIR}/q3_ui/ui_qmenu.c
+-    ${SOURCE_DIR}/q3_ui/ui_removebots.c
+-    ${SOURCE_DIR}/q3_ui/ui_saveconfig.c
+-    ${SOURCE_DIR}/q3_ui/ui_serverinfo.c
+-    ${SOURCE_DIR}/q3_ui/ui_servers2.c
+-    ${SOURCE_DIR}/q3_ui/ui_setup.c
+-    ${SOURCE_DIR}/q3_ui/ui_sound.c
+-    ${SOURCE_DIR}/q3_ui/ui_sparena.c
+-    ${SOURCE_DIR}/q3_ui/ui_specifyserver.c
+-    ${SOURCE_DIR}/q3_ui/ui_splevel.c
+-    ${SOURCE_DIR}/q3_ui/ui_sppostgame.c
+-    ${SOURCE_DIR}/q3_ui/ui_spskill.c
+-    ${SOURCE_DIR}/q3_ui/ui_startserver.c
+-    ${SOURCE_DIR}/q3_ui/ui_team.c
+-    ${SOURCE_DIR}/q3_ui/ui_teamorders.c
+-    ${SOURCE_DIR}/q3_ui/ui_video.c
+ )
++# set(UI_SOURCES
++#     ${SOURCE_DIR}/q3_ui/ui_main.c
++#     ${SOURCE_DIR}/game/bg_misc.c
++#     ${SOURCE_DIR}/game/bg_lib.c
++#     ${SOURCE_DIR}/q3_ui/ui_addbots.c
++#     ${SOURCE_DIR}/q3_ui/ui_atoms.c
++#     ${SOURCE_DIR}/q3_ui/ui_cdkey.c
++#     ${SOURCE_DIR}/q3_ui/ui_cinematics.c
++#     ${SOURCE_DIR}/q3_ui/ui_confirm.c
++#     ${SOURCE_DIR}/q3_ui/ui_connect.c
++#     ${SOURCE_DIR}/q3_ui/ui_controls2.c
++#     ${SOURCE_DIR}/q3_ui/ui_credits.c
++#     ${SOURCE_DIR}/q3_ui/ui_demo2.c
++#     ${SOURCE_DIR}/q3_ui/ui_display.c
++#     ${SOURCE_DIR}/q3_ui/ui_gameinfo.c
++#     ${SOURCE_DIR}/q3_ui/ui_ingame.c
++#     ${SOURCE_DIR}/q3_ui/ui_loadconfig.c
++#     ${SOURCE_DIR}/q3_ui/ui_menu.c
++#     ${SOURCE_DIR}/q3_ui/ui_mfield.c
++#     ${SOURCE_DIR}/q3_ui/ui_mods.c
++#     ${SOURCE_DIR}/q3_ui/ui_network.c
++#     ${SOURCE_DIR}/q3_ui/ui_options.c
++#     ${SOURCE_DIR}/q3_ui/ui_playermodel.c
++#     ${SOURCE_DIR}/q3_ui/ui_players.c
++#     ${SOURCE_DIR}/q3_ui/ui_playersettings.c
++#     ${SOURCE_DIR}/q3_ui/ui_preferences.c
++#     ${SOURCE_DIR}/q3_ui/ui_qmenu.c
++#     ${SOURCE_DIR}/q3_ui/ui_removebots.c
++#     ${SOURCE_DIR}/q3_ui/ui_saveconfig.c
++#     ${SOURCE_DIR}/q3_ui/ui_serverinfo.c
++#     ${SOURCE_DIR}/q3_ui/ui_servers2.c
++#     ${SOURCE_DIR}/q3_ui/ui_setup.c
++#     ${SOURCE_DIR}/q3_ui/ui_sound.c
++#     ${SOURCE_DIR}/q3_ui/ui_sparena.c
++#     ${SOURCE_DIR}/q3_ui/ui_specifyserver.c
++#     ${SOURCE_DIR}/q3_ui/ui_splevel.c
++#     ${SOURCE_DIR}/q3_ui/ui_sppostgame.c
++#     ${SOURCE_DIR}/q3_ui/ui_spskill.c
++#     ${SOURCE_DIR}/q3_ui/ui_startserver.c
++#     ${SOURCE_DIR}/q3_ui/ui_team.c
++#     ${SOURCE_DIR}/q3_ui/ui_teamorders.c
++#     ${SOURCE_DIR}/q3_ui/ui_video.c
++# )
+ 
+ set(UI_BINARY_SOURCES ${SOURCE_DIR}/ui/ui_syscalls.c)
+-set(UI_QVM_SOURCES ${SOURCE_DIR}/ui/ui_syscalls.asm)
++set(UI_QVM_SOURCES ${ORION_GAME_DIR}/ui/ui_syscalls.asm)
+ 
+ set(GAME_MODULE_SHARED_SOURCES
+     ${SOURCE_DIR}/qcommon/q_math.c

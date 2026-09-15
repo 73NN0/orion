@@ -1,0 +1,34 @@
+# Configuration for clang-tidy in the 3drenderer project.
+#
+# Enabled checks:
+#   - clang-analyzer-* : standard static analysis
+#   - bugprone-*        : detection of risky patterns
+#   - readability-*     : readability
+#
+# Disabled checks (with reason):
+#   - readability-magic-numbers
+#       Too noisy in graphical code (hex colors, screen dimensions,
+#       FOV multipliers). The "magic numbers" here are semantically explicit
+#       at the point of use.
+#
+#   - readability-isolate-declaration
+#       Stylistic preference. Sometimes `int x, y;` is preferred when variables
+#       are semantically related.
+#
+#   - bugprone-easily-swappable-parameters
+#       Too noisy with idiomatic C conventions: (int x, int y), (int w, int h),
+#       (int start, int end). The only real case found (two vector3D structs in
+#       meshProject) was resolved by moving rotation into struct mesh. Vigilance
+#       maintained manually.
+
+
+Checks: >
+  clang-analyzer-*,
+  bugprone-*,
+  readability-*,
+  -readability-magic-numbers,
+  -readability-isolate-declaration,
+  -bugprone-easily-swappable-parameters
+
+WarningsAsErrors: ''
+HeaderFilterRegex: 'sys/include/.*'

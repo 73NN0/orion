@@ -1,0 +1,25 @@
+diff --git a/cmake/runtime.cmake b/cmake/runtime.cmake
+new file mode 100644
+index 00000000..16fc9dd3
+--- /dev/null
++++ b/cmake/runtime.cmake
+@@ -0,0 +1,18 @@
++set(ORION_DATA_DIR
++	${CMAKE_SOURCE_DIR}/../${BASEGAME}
++)
++
++set(ORION_RUNTIME_DIR
++	${CMAKE_BINARY_DIR}/$<CONFIG>/${BASEGAME}
++)
++
++add_custom_target(runtime_data ALL
++	COMMAND ${CMAKE_COMMAND} -E make_directory
++		${ORION_RUNTIME_DIR}
++
++	COMMAND ${CMAKE_COMMAND} -E copy_directory
++		${ORION_DATA_DIR}
++		${ORION_RUNTIME_DIR}
++
++	COMMENT "Staging ${BASEGAME} runtime data"
++)
+\ No newline at end of file

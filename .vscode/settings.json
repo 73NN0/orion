@@ -1,0 +1,8 @@
+{   
+    "files.associations": {
+        "sdl.h": "c",
+        "any": "c",
+        "complex": "c"
+    },
+    "editor.formatOnSave": true
+}

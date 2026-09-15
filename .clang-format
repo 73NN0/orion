@@ -1,0 +1,76 @@
+# yaml-language-server: $schema=https://json.schemastore.org/clang-format-21.x.json
+
+# =====================================================
+# 73NN0 – Plan 9 / OpenBSD strict C style + JS brace hybrid
+# =====================================================
+
+Language: C
+BasedOnStyle: LLVM
+
+# --- Indentation ---
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ContinuationIndentWidth: 4
+IndentCaseLabels: false
+
+# --- Braces (K&R / JS hybrid) ---
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterFunction: false
+  AfterControlStatement: Never
+  AfterStruct: false
+  AfterEnum: false
+  BeforeElse: false
+  BeforeWhile: false
+  BeforeCatch: false
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
+
+# --- Layout ---
+ColumnLimit: 100
+KeepEmptyLinesAtTheStartOfBlocks: false
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+AllowShortCaseLabelsOnASingleLine: false
+
+AlwaysBreakAfterReturnType: AllDefinitions # temporary for clang <19
+BreakAfterReturnType: All
+PenaltyReturnTypeOnItsOwnLine: 0
+AlignAfterOpenBracket: DontAlign
+AlignOperands: DontAlign
+AlignConsecutiveAssignments: None
+AlignConsecutiveDeclarations: None
+AlignTrailingComments: true
+BreakBeforeBinaryOperators: All
+BreakConstructorInitializersBeforeComma: false
+
+# --- Pointers / References ---
+PointerAlignment: Right
+DerivePointerAlignment: false
+SpaceAroundPointerQualifiers: Before
+SpaceBeforeParens: ControlStatements
+SpaceAfterCStyleCast: false
+
+# --- Spacing ---
+SpaceBeforeAssignmentOperators: true
+SpaceAfterControlStatementKeyword: true
+SpaceBeforeCtorInitializerColon: true
+SpaceAfterLogicalNot: false
+SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: 2
+
+# --- Comments ---
+ReflowComments: Never
+CommentPragmas: "^!"
+IndentPPDirectives: None
+IncludeBlocks: Preserve
+
+# --- Misc ---
+AllowAllArgumentsOnNextLine: false
+BinPackParameters: BinPack
+BinPackArguments: false
+IndentExternBlock: NoIndent
+TypenameMacros: ["nil"]

@@ -1,0 +1,35 @@
+# Add patterns to ignore here, one per line
+
+# Example:
+
+# .log
+
+# tmp/
+
+.vscode/
+misc/
+docs/
+web/
+ui/
+build/
+.github/
+engine/code/renderergl1/
+engine/code/thirdparty/
+.git/
+.gitignore
+.md
+TODO
+Changelog
+temp/
+engine/cmake/
+engine/.github/
+.clang-format
+.clang-tidy
+.clangd
+\*.txt
+
+engine/code/asm
+engine/code/botlib
+engine/code/renderercommon
+engine/code/sdl
+engine/code/tools
