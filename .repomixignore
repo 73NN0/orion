@@ -10,7 +10,6 @@
 misc/
 docs/
 web/
-ui/
 build/
 .github/
 engine/code/renderergl1/
