@@ -27,7 +27,7 @@ index 4f0f8be5..42a4bbd3 100644
  include(post_configure)
  include(installer)
 diff --git a/cmake/basegame.cmake b/cmake/basegame.cmake
-index 8a45bfca..29a360bf 100644
+index 8a45bfca..70423519 100644
 --- a/cmake/basegame.cmake
 +++ b/cmake/basegame.cmake
 @@ -5,6 +5,8 @@ endif()
@@ -39,7 +39,7 @@ index 8a45bfca..29a360bf 100644
  set(CGAME_SOURCES
      ${SOURCE_DIR}/cgame/cg_main.c
      ${SOURCE_DIR}/game/bg_misc.c
-@@ -72,51 +74,56 @@ set(GAME_BINARY_SOURCES ${SOURCE_DIR}/game/g_syscalls.c)
+@@ -72,48 +74,55 @@ set(GAME_BINARY_SOURCES ${SOURCE_DIR}/game/g_syscalls.c)
  set(GAME_QVM_SOURCES ${SOURCE_DIR}/game/g_syscalls.asm)
  
  set(UI_SOURCES
@@ -47,6 +47,8 @@ index 8a45bfca..29a360bf 100644
 -    ${SOURCE_DIR}/game/bg_misc.c
 +    ${ORION_GAME_DIR}/ui/ui_main.c
 +    ${ORION_GAME_DIR}/ui/ui_sys.c
++    ${ORION_GAME_DIR}/ui/ui_draw.c
++    ${ORION_GAME_DIR}/ui/ui_scene.c
      ${SOURCE_DIR}/game/bg_lib.c
 -    ${SOURCE_DIR}/q3_ui/ui_addbots.c
 -    ${SOURCE_DIR}/q3_ui/ui_atoms.c
@@ -132,8 +134,4 @@ index 8a45bfca..29a360bf 100644
 +# )
  
  set(UI_BINARY_SOURCES ${SOURCE_DIR}/ui/ui_syscalls.c)
--set(UI_QVM_SOURCES ${SOURCE_DIR}/ui/ui_syscalls.asm)
-+set(UI_QVM_SOURCES ${ORION_GAME_DIR}/ui/ui_syscalls.asm)
- 
- set(GAME_MODULE_SHARED_SOURCES
-     ${SOURCE_DIR}/qcommon/q_math.c
+ set(UI_QVM_SOURCES ${SOURCE_DIR}/ui/ui_syscalls.asm)

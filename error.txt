@@ -1,0 +1,475 @@
+tty]    orion 0.1.0_g58839361 linux-x86_64-debug Sep 30 2026
+tty]    SSE instruction set enabled
+tty]    ----- FS_Startup -----
+tty]    We are looking in the current search path:
+tty]    /home/tenno/.config/orion/reach
+tty]    /home/tenno/.local/share/orion/reach
+tty]    /home/tenno/.local/state/orion/reach
+tty]    ./reach
+tty]    
+tty]    ----------------------
+tty]    0 files in pk3 files
+tty]    execing default.cfg
+tty]    execing keys.cfg
+tty]    couldn't exec orion.cfg
+tty]    couldn't exec autoexec.cfg
+tty]    Hunk_Clear: reset the hunk ok
+tty]    ----- Client Initialization -----
+tty]    Couldn't read q3history.
+tty]    Loading "libcurl.so.4"...Trying to load "libcurl.so.4"...
+tty]    OK
+tty]    ----- Initializing Renderer ----
+tty]    Trying to load "renderer_opengl2.so" from "."...
+tty]    -------------------------------
+tty]    QKEY found.
+tty]    ----- Client Initialization Complete -----
+tty]    ----- R_Init -----
+tty]    SDL using driver "x11"
+tty]    Initializing OpenGL display
+tty]    Display aspect: 1.778
+tty]    ...setting mode 4: 800 600
+tty]    Using 24 color bits, 24 depth, 8 stencil display.
+tty]    Available modes: '1280x720 1600x900 1920x1080 720x400 1280x800 1440x900 1680x1050 720x480 640x480 800x600 832x624 1024x768 1152x864 720x576 1280x1024'
+tty]    GL_RENDERER: AMD Radeon RX 7800 XT (radeonsi, navi32, ACO, DRM 3.64, 7.2.7-zen1-1-zen)
+tty]    Initializing OpenGL extensions
+tty]    ...GL_EXT_texture_compression_s3tc not found
+tty]    ...ignoring GL_S3_s3tc
+tty]    ...ignoring GL_EXT_texture_filter_anisotropic
+tty]    ...using GL_SGIS_texture_edge_clamp
+tty]    ...using GL_ARB_framebuffer_object
+tty]    ...using GL_ARB_vertex_array_object
+tty]    ...using GL_ARB_texture_float
+tty]    ...using GL_ARB_depth_clamp
+tty]    ...ignoring GL_ARB_seamless_cube_map
+tty]    ...using GL_NVX_gpu_memory_info
+tty]    ...ignoring GL_ATI_meminfo
+tty]    ...ignoring GL_ARB_texture_compression_rgtc
+tty]    ...ignoring GL_ARB_texture_compression_bptc
+tty]    ...GL_EXT_direct_state_access not found
+tty]    ...using GLSL version 4.60
+tty]    ------- FBO_Init -------
+tty]    ------- GLSL_InitGPUShaders -------
+tty]    Using GPU vertex animation
+tty]    loaded 115 GLSL shaders (48 gen 42 light 25 etc) in  0.02 seconds
+tty]    ------- R_InitVaos -------
+tty]    Initializing Shaders
+tty]    
+GL_VENDOR: AMD
+tty]    GL_RENDERER: AMD Radeon RX 7800 XT (radeonsi, navi32, ACO, DRM 3.64, 7.2.7-zen1-1-zen)
+tty]    GL_VERSION: 4.6 (Core Profile) Mesa 26.2.3-arch1.1
+tty]    GL_EXTENSIONS: GL_AMD_conservative_depth GL_AMD_depth_clamp_separate GL_AMD_draw_buffers_blend GL_AMD_gpu_shader_int64 GL_AMD_multi_draw_indirect GL_AMD_pinned_memory GL_AMD_query_buffer_object GL_AMD_seamless_cubemap_per_texture GL_AMD_shader_stencil_export GL_AMD_shader_trinary_minmax GL_AMD_texture_texture4 GL_AMD_vertex_shader_layer GL_AMD_vertex_shader_viewport_index GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ARB_ES2_compatibility GL_ARB_ES3_1_compatibility GL_ARB_ES3_2_compatibility GL_ARB_ES3_compatibility GL_ARB_arrays_of_arrays GL_ARB_base_instance GL_ARB_bindless_texture GL_ARB_blend_func_extended GL_ARB_buffer_storage GL_ARB_clear_buffer_object GL_ARB_clear_texture GL_ARB_clip_control GL_ARB_color_buffer_float GL_ARB_compressed_texture_pixel_storage GL_ARB_compute_shader GL_ARB_compute_variable_group_size GL_ARB_conditional_render_inverted GL_ARB_conservative_depth GL_ARB_copy_buffer GL_ARB_copy_image GL_ARB_cull_distance GL_ARB_debug_output GL_ARB_depth_buffer_float GL_ARB_depth_clamp GL_ARB_derivative_control GL_ARB_direct_state_access GL_ARB_draw_buffers GL_ARB_draw_buffers_blend GL_ARB_draw_elements_base_vertex GL_ARB_draw_indirect GL_ARB_draw_instanced GL_ARB_enhanced_layouts GL_ARB_explicit_attrib_location GL_ARB_explicit_uniform_location GL_ARB_fragment_coord_conventions GL_ARB_fragment_layer_viewport GL_ARB_fragment_shader GL_ARB_framebuffer_no_attachments GL_ARB_framebuffer_object GL_ARB_framebuffer_sRGB GL_ARB_get_program_binary GL_ARB_get_texture_sub_image GL_ARB_gl_spirv GL_ARB_gpu_shader5 GL_ARB_gpu_shader_fp64 GL_ARB_gpu_shader_int64 GL_ARB_half_float_pixel GL_ARB_half_float_vertex GL_ARB_indirect_parameters GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_internalformat_query2 GL_ARB_invalidate_subdata GL_ARB_map_buffer_alignment GL_ARB_map_buffer_range GL_ARB_multi_bind GL_ARB_multi_draw_indirect GL_ARB_occlusion_query2 GL_ARB_parallel_shader_compile GL_ARB_pipeline_statistics_query GL_ARB_pixel_buffer_object GL_ARB_point_sprite GL_ARB_polygon_offset_clamp GL_ARB_post_depth_coverage GL_ARB_program_interface_query GL_ARB_provoking_vertex GL_ARB_query_buffer_object GL_ARB_robust_buffer_access_behavior GL_ARB_robustness GL_ARB_sample_shading GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_seamless_cubemap_per_texture GL_ARB_separate_shader_objects GL_ARB_shader_atomic_counter_ops GL_ARB_shader_atomic_counters GL_ARB_shader_ballot GL_ARB_shader_bit_encoding GL_ARB_shader_clock GL_ARB_shader_draw_parameters GL_ARB_shader_group_vote GL_ARB_shader_image_load_store GL_ARB_shader_image_size GL_ARB_shader_objects GL_ARB_shader_precision GL_ARB_shader_stencil_export GL_ARB_shader_storage_buffer_object GL_ARB_shader_subroutine GL_ARB_shader_texture_image_samples GL_ARB_shader_texture_lod GL_ARB_shader_viewport_layer_array GL_ARB_shading_language_420pack GL_ARB_shading_language_include GL_ARB_shading_language_packing GL_ARB_sparse_buffer GL_ARB_sparse_texture GL_ARB_sparse_texture2 GL_ARB_sparse_texture_clamp GL_ARB_spirv_extensions GL_ARB_stencil_texturing GL_ARB_sync GL_ARB_tessellation_shader GL_ARB_texture_barrier GL_ARB_texture_border_clamp GL_ARB_texture_buffer_object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map_array GL_ARB_texture_filter_anisotropic GL_ARB_texture_filter_minmax GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_stencil8 GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_transform_feedback_overflow_query GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ATI_blend_equation_separate GL_ATI_meminfo GL_ATI_texture_float GL_ATI_texture_mirror_once GL_EXT_EGL_image_storage GL_EXT_EGL_image_storage_compression GL_EXT_EGL_sync GL_EXT_abgr GL_EXT_blend_equation_separate GL_EXT_debug_label GL_EXT_demote_to_helper_invocation GL_EXT_depth_bounds_test GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_memory_object GL_EXT_memory_object_fd GL_EXT_mesh_shader GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_pixel_buffer_object GL_EXT_polygon_offset_clamp GL_EXT_provoking_vertex GL_EXT_semaphore GL_EXT_semaphore_fd GL_EXT_shader_clock GL_EXT_shader_image_load_formatted GL_EXT_shader_image_load_store GL_EXT_shader_integer_mix GL_EXT_texture_array GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_filter_anisotropic GL_EXT_texture_filter_minmax GL_EXT_texture_integer GL_EXT_texture_mirror_clamp GL_EXT_texture_sRGB GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_RG8 GL_EXT_texture_sRGB_decode GL_EXT_texture_shadow_lod GL_EXT_texture_shared_exponent GL_EXT_texture_snorm GL_EXT_texture_storage GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_EXT_window_rectangles GL_IBM_multimode_draw_arrays GL_INTEL_blackhole_render GL_KHR_blend_equation_advanced GL_KHR_context_flush_control GL_KHR_debug GL_KHR_no_error GL_KHR_parallel_shader_compile GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_KHR_shader_subgroup GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_sliced_3d GL_MESA_framebuffer_flip_y GL_MESA_pack_invert GL_MESA_shader_integer_functions GL_MESA_texture_const_bandwidth GL_MESA_texture_signed_rgba GL_NVX_gpu_memory_info GL_NV_alpha_to_coverage_dither_control GL_NV_compute_shader_derivatives GL_NV_conditional_render GL_NV_copy_image GL_NV_depth_clamp GL_NV_packed_depth_stencil GL_NV_shader_atomic_int64 GL_NV_texture_barrier GL_NV_timeline_semaphore GL_OES_EGL_image GL_S3_s3tc 
+tty]    GL_MAX_TEXTURE_SIZE: 16384
+tty]    GL_MAX_TEXTURE_IMAGE_UNITS: 32
+tty]    
+PIXELFORMAT: color(24-bits) Z(24-bit) stencil(8-bits)
+tty]    MODE: 4, 800 x 600 windowed hz:N/A
+tty]    GAMMA: software w/ 1 overbright bits
+tty]    texturemode: GL_LINEAR_MIPMAP_LINEAR
+tty]    picmip: 1
+tty]    texture bits: 0
+tty]    compiled vertex arrays: disabled
+tty]    texenv add: enabled
+tty]    compressed textures: disabled
+tty]    ----- finished R_Init -----
+tty]    ------ Initializing Sound ------
+tty]    Trying to load "libopenal.so.1"...
+tty]    Allocated 96 sources.
+tty]    OpenAL default capture device is 'Corsair VOID ELITE USB Gaming Headset Analog Stereo #2'
+tty]    OpenAL capture device opened.
+tty]    OpenAL info:
+tty]      Vendor:         OpenAL Community
+tty]      Version:        1.1 ALSOFT 1.25.2
+tty]      Renderer:       OpenAL Soft
+tty]      AL Extensions:  AL_EXT_ALAW AL_EXT_BFORMAT AL_EXT_debug AL_EXT_direct_context AL_EXT_DOUBLE AL_EXT_EXPONENT_DISTANCE AL_EXT_FLOAT32 AL_EXT_IMA4 AL_EXT_LINEAR_DISTANCE AL_EXT_MCFORMATS AL_EXT_MULAW AL_EXT_MULAW_BFORMAT AL_EXT_MULAW_MCFORMATS AL_EXT_OFFSET AL_EXT_source_distance_model AL_EXT_SOURCE_RADIUS AL_EXT_STATIC_BUFFER AL_EXT_STEREO_ANGLES AL_LOKI_quadriphonic AL_SOFT_bformat_ex AL_SOFT_bformat_hoa AL_SOFT_block_alignment AL_SOFT_buffer_length_query AL_SOFT_callback_buffer AL_SOFTX_convolution_effect AL_SOFT_deferred_updates AL_SOFT_direct_channels AL_SOFT_direct_channels_remix AL_SOFT_effect_target AL_SOFT_events AL_SOFT_gain_clamp_ex AL_SOFTX_hold_on_disconnect AL_SOFT_loop_points AL_SOFTX_map_buffer AL_SOFT_MSADPCM AL_SOFT_source_latency AL_SOFT_source_length AL_SOFTX_source_panning AL_SOFT_source_resampler AL_SOFT_source_spatialize AL_SOFT_source_start_delay AL_SOFT_UHJ AL_SOFT_UHJ_ex
+tty]      ALC Extensions: ALC_ENUMERATE_ALL_EXT ALC_ENUMERATION_EXT ALC_EXT_CAPTURE ALC_EXT_debug ALC_EXT_DEDICATED ALC_EXT_direct_context ALC_EXT_disconnect ALC_EXT_EFX ALC_EXT_thread_local_context ALC_SOFT_device_clock ALC_SOFT_HRTF ALC_SOFT_loopback ALC_SOFT_loopback_bformat ALC_SOFT_output_limiter ALC_SOFT_output_mode ALC_SOFT_pause_device ALC_SOFT_reopen_device ALC_SOFT_system_events
+tty]      Device:         Corsair VOID ELITE USB Gaming Headset Analog Stereo
+tty]      Available Devices:
+Corsair VOID ELITE USB Gaming Headset Analog Stereo
+Ryzen HD Audio Controller Digital Stereo (IEC958)
+Navi 31 HDMI/DP Audio Digital Stereo (HDMI 2) [LS24AG32x]
+tty]      Input Device:   Corsair VOID ELITE USB Gaming Headset Analog Stereo #2
+tty]      Available Input Devices:
+Corsair VOID ELITE USB Gaming Headset Analog Stereo #2
+Monitor of Corsair VOID ELITE USB Gaming Headset Analog Stereo
+Ryzen HD Audio Controller Analog Stereo
+Monitor of Ryzen HD Audio Controller Digital Stereo (IEC958)
+Monitor of Navi 31 HDMI/DP Audio Digital Stereo (HDMI 2) [LS24AG32x]
+tty]    Sound initialization successful.
+tty]    --------------------------------
+tty]    Loading vm file vm/ui.qvm...
+tty]    File "vm/ui.qvm" found at "./reach"
+tty]    ...which has vmMagic VM_MAGIC_VER2
+tty]    Loading 49 jump table targets
+tty]    VM file ui compiled to 173866 bytes of code
+tty]    ui loaded in 415296 bytes on the hunk
+tty]    ui: 800x600 white=10 charset=11 pulse=12 scroll=13 cube=1
+tty]    --- Common Initialization Complete ---
+tty]    IP: 127.0.0.1
+tty]    IP: 192.168.1.102
+tty]    IP: 192.168.49.1
+tty]    IP: 172.17.0.1
+tty]    IP6: ::1
+tty]    IP6: 2a04:cec0:1900:f700::d2c
+tty]    IP6: 2a04:cec0:1900:f700:72dc:f400:d6cc:2b5f
+tty]    IP6: fe80::59b9:5500:da1:42d7%enp8s0
+tty]    IP6: fe80::2cdb:40ff:fefb:38d7%docker0
+tty]    IP6: fe80::81:e3ff:fe43:73cd%veth73202f1
+tty]    Opening IP6 socket: [::]:27960
+tty]    Opening IP socket: 0.0.0.0:27960
+tty]    ------ Server Initialization ------
+tty]    Server: orion_niveau1
+tty]    RE_Shutdown( 0 )
+tty]    ------- FBO_Shutdown -------
+tty]    ------- R_ShutdownVaos -------
+tty]    ------- GLSL_ShutdownGPUShaders -------
+tty]    Hunk_Clear: reset the hunk ok
+tty]    ----- FS_Startup -----
+tty]    We are looking in the current search path:
+tty]    /home/tenno/.config/orion/reach
+tty]    /home/tenno/.local/share/orion/reach
+tty]    /home/tenno/.local/state/orion/reach
+tty]    ./reach
+tty]    
+tty]    ----------------------
+tty]    0 files in pk3 files
+tty]    Loading vm file vm/qagame.qvm...
+tty]    File "vm/qagame.qvm" found at "./reach"
+tty]    ...which has vmMagic VM_MAGIC_VER2
+tty]    Loading 896 jump table targets
+tty]    VM file qagame compiled to 1273425 bytes of code
+tty]    qagame loaded in 3307744 bytes on the hunk
+tty]    ------- Game Initialization -------
+tty]    gamename: baseq3
+tty]    gamedate: Sep 30 2026
+tty]    0 teams with 0 entities
+tty]    2 items registered
+tty]    -----------------------------------
+tty]    -----------------------------------
+tty]    RE_Shutdown( 0 )
+tty]    ----- R_Init -----
+tty]    ------- FBO_Init -------
+tty]    ------- GLSL_InitGPUShaders -------
+tty]    Using GPU vertex animation
+tty]    loaded 115 GLSL shaders (48 gen 42 light 25 etc) in  0.02 seconds
+tty]    ------- R_InitVaos -------
+tty]    Initializing Shaders
+tty]    
+GL_VENDOR: AMD
+tty]    GL_RENDERER: AMD Radeon RX 7800 XT (radeonsi, navi32, ACO, DRM 3.64, 7.2.7-zen1-1-zen)
+tty]    GL_VERSION: 4.6 (Core Profile) Mesa 26.2.3-arch1.1
+tty]    GL_EXTENSIONS: GL_AMD_conservative_depth GL_AMD_depth_clamp_separate GL_AMD_draw_buffers_blend GL_AMD_gpu_shader_int64 GL_AMD_multi_draw_indirect GL_AMD_pinned_memory GL_AMD_query_buffer_object GL_AMD_seamless_cubemap_per_texture GL_AMD_shader_stencil_export GL_AMD_shader_trinary_minmax GL_AMD_texture_texture4 GL_AMD_vertex_shader_layer GL_AMD_vertex_shader_viewport_index GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ARB_ES2_compatibility GL_ARB_ES3_1_compatibility GL_ARB_ES3_2_compatibility GL_ARB_ES3_compatibility GL_ARB_arrays_of_arrays GL_ARB_base_instance GL_ARB_bindless_texture GL_ARB_blend_func_extended GL_ARB_buffer_storage GL_ARB_clear_buffer_object GL_ARB_clear_texture GL_ARB_clip_control GL_ARB_color_buffer_float GL_ARB_compressed_texture_pixel_storage GL_ARB_compute_shader GL_ARB_compute_variable_group_size GL_ARB_conditional_render_inverted GL_ARB_conservative_depth GL_ARB_copy_buffer GL_ARB_copy_image GL_ARB_cull_distance GL_ARB_debug_output GL_ARB_depth_buffer_float GL_ARB_depth_clamp GL_ARB_derivative_control GL_ARB_direct_state_access GL_ARB_draw_buffers GL_ARB_draw_buffers_blend GL_ARB_draw_elements_base_vertex GL_ARB_draw_indirect GL_ARB_draw_instanced GL_ARB_enhanced_layouts GL_ARB_explicit_attrib_location GL_ARB_explicit_uniform_location GL_ARB_fragment_coord_conventions GL_ARB_fragment_layer_viewport GL_ARB_fragment_shader GL_ARB_framebuffer_no_attachments GL_ARB_framebuffer_object GL_ARB_framebuffer_sRGB GL_ARB_get_program_binary GL_ARB_get_texture_sub_image GL_ARB_gl_spirv GL_ARB_gpu_shader5 GL_ARB_gpu_shader_fp64 GL_ARB_gpu_shader_int64 GL_ARB_half_float_pixel GL_ARB_half_float_vertex GL_ARB_indirect_parameters GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_internalformat_query2 GL_ARB_invalidate_subdata GL_ARB_map_buffer_alignment GL_ARB_map_buffer_range GL_ARB_multi_bind GL_ARB_multi_draw_indirect GL_ARB_occlusion_query2 GL_ARB_parallel_shader_compile GL_ARB_pipeline_statistics_query GL_ARB_pixel_buffer_object GL_ARB_point_sprite GL_ARB_polygon_offset_clamp GL_ARB_post_depth_coverage GL_ARB_program_interface_query GL_ARB_provoking_vertex GL_ARB_query_buffer_object GL_ARB_robust_buffer_access_behavior GL_ARB_robustness GL_ARB_sample_shading GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_seamless_cubemap_per_texture GL_ARB_separate_shader_objects GL_ARB_shader_atomic_counter_ops GL_ARB_shader_atomic_counters GL_ARB_shader_ballot GL_ARB_shader_bit_encoding GL_ARB_shader_clock GL_ARB_shader_draw_parameters GL_ARB_shader_group_vote GL_ARB_shader_image_load_store GL_ARB_shader_image_size GL_ARB_shader_objects GL_ARB_shader_precision GL_ARB_shader_stencil_export GL_ARB_shader_storage_buffer_object GL_ARB_shader_subroutine GL_ARB_shader_texture_image_samples GL_ARB_shader_texture_lod GL_ARB_shader_viewport_layer_array GL_ARB_shading_language_420pack GL_ARB_shading_language_include GL_ARB_shading_language_packing GL_ARB_sparse_buffer GL_ARB_sparse_texture GL_ARB_sparse_texture2 GL_ARB_sparse_texture_clamp GL_ARB_spirv_extensions GL_ARB_stencil_texturing GL_ARB_sync GL_ARB_tessellation_shader GL_ARB_texture_barrier GL_ARB_texture_border_clamp GL_ARB_texture_buffer_object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map_array GL_ARB_texture_filter_anisotropic GL_ARB_texture_filter_minmax GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_stencil8 GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_transform_feedback_overflow_query GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ATI_blend_equation_separate GL_ATI_meminfo GL_ATI_texture_float GL_ATI_texture_mirror_once GL_EXT_EGL_image_storage GL_EXT_EGL_image_storage_compression GL_EXT_EGL_sync GL_EXT_abgr GL_EXT_blend_equation_separate GL_EXT_debug_label GL_EXT_demote_to_helper_invocation GL_EXT_depth_bounds_test GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_memory_object GL_EXT_memory_object_fd GL_EXT_mesh_shader GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_pixel_buffer_object GL_EXT_polygon_offset_clamp GL_EXT_provoking_vertex GL_EXT_semaphore GL_EXT_semaphore_fd GL_EXT_shader_clock GL_EXT_shader_image_load_formatted GL_EXT_shader_image_load_store GL_EXT_shader_integer_mix GL_EXT_texture_array GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_filter_anisotropic GL_EXT_texture_filter_minmax GL_EXT_texture_integer GL_EXT_texture_mirror_clamp GL_EXT_texture_sRGB GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_RG8 GL_EXT_texture_sRGB_decode GL_EXT_texture_shadow_lod GL_EXT_texture_shared_exponent GL_EXT_texture_snorm GL_EXT_texture_storage GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_EXT_window_rectangles GL_IBM_multimode_draw_arrays GL_INTEL_blackhole_render GL_KHR_blend_equation_advanced GL_KHR_context_flush_control GL_KHR_debug GL_KHR_no_error GL_KHR_parallel_shader_compile GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_KHR_shader_subgroup GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_sliced_3d GL_MESA_framebuffer_flip_y GL_MESA_pack_invert GL_MESA_shader_integer_functions GL_MESA_texture_const_bandwidth GL_MESA_texture_signed_rgba GL_NVX_gpu_memory_info GL_NV_alpha_to_coverage_dither_control GL_NV_compute_shader_derivatives GL_NV_conditional_render GL_NV_copy_image GL_NV_depth_clamp GL_NV_packed_depth_stencil GL_NV_shader_atomic_int64 GL_NV_texture_barrier GL_NV_timeline_semaphore GL_OES_EGL_image GL_S3_s3tc 
+tty]    GL_MAX_TEXTURE_SIZE: 16384
+tty]    GL_MAX_TEXTURE_IMAGE_UNITS: 32
+tty]    
+PIXELFORMAT: color(24-bits) Z(24-bit) stencil(8-bits)
+tty]    MODE: 4, 800 x 600 windowed hz:N/A
+tty]    GAMMA: software w/ 1 overbright bits
+tty]    texturemode: GL_LINEAR_MIPMAP_LINEAR
+tty]    picmip: 1
+tty]    texture bits: 0
+tty]    compiled vertex arrays: disabled
+tty]    texenv add: enabled
+tty]    compressed textures: disabled
+tty]    ----- finished R_Init -----
+tty]    Loading vm file vm/ui.qvm...
+tty]    File "vm/ui.qvm" found at "./reach"
+tty]    ...which has vmMagic VM_MAGIC_VER2
+tty]    Loading 49 jump table targets
+tty]    VM file ui compiled to 173866 bytes of code
+tty]    ui loaded in 415296 bytes on the hunk
+tty]    ui: 800x600 white=10 charset=11 pulse=12 scroll=13 cube=1
+tty]    Loading vm file vm/cgame.qvm...
+tty]    File "vm/cgame.qvm" found at "./reach"
+tty]    ...which has vmMagic VM_MAGIC_VER2
+tty]    Loading 798 jump table targets
+tty]    VM file cgame compiled to 919834 bytes of code
+tty]    cgame loaded in 2941088 bytes on the hunk
+tty]    ^3WARNING: Failed to load sound sound/feedback/1_minute.wav!
+tty]    ^3WARNING: Using default sound for sound/feedback/1_minute.wav
+tty]    ^3WARNING: Failed to load sound sound/feedback/5_minute.wav!
+tty]    ^3WARNING: Using default sound for sound/feedback/5_minute.wav
+tty]    ^3WARNING: Failed to load sound sound/feedback/sudden_death.wav!
+tty]    ^3WARNING: Using default sound for sound/feedback/sudden_death.wav
+tty]    ^3WARNING: Failed to load sound sound/feedback/1_frag.wav!
+tty]    ^3WARNING: Using default sound for sound/feedback/1_frag.wav
+tty]    ^3WARNING: Failed to load sound sound/feedback/2_frags.wav!
+tty]    ^3WARNING: Using default sound for sound/feedback/2_frags.wav
+tty]    ^3WARNING: Failed to load sound sound/feedback/3_frags.wav!
+tty]    ^3WARNING: Using default sound for sound/feedback/3_frags.wav
+tty]    ^3WARNING: Failed to load sound sound/feedback/three.wav!
+tty]    ^3WARNING: Using default sound for sound/feedback/three.wav
+tty]    ^3WARNING: Failed to load sound sound/feedback/two.wav!
+tty]    ^3WARNING: Using default sound for sound/feedback/two.wav
+tty]    ^3WARNING: Failed to load sound sound/feedback/one.wav!
+tty]    ^3WARNING: Using default sound for sound/feedback/one.wav
+tty]    ^3WARNING: Failed to load sound sound/feedback/fight.wav!
+tty]    ^3WARNING: Using default sound for sound/feedback/fight.wav
+tty]    ^3WARNING: Failed to load sound sound/feedback/prepare.wav!
+tty]    ^3WARNING: Using default sound for sound/feedback/prepare.wav
+tty]    ^3WARNING: Failed to load sound sound/weapons/machinegun/buletby1.wav!
+tty]    ^3WARNING: Using default sound for sound/weapons/machinegun/buletby1.wav
+tty]    ^3WARNING: Failed to load sound sound/weapons/change.wav!
+tty]    ^3WARNING: Using default sound for sound/weapons/change.wav
+tty]    ^3WARNING: Failed to load sound sound/items/wearoff.wav!
+tty]    ^3WARNING: Using default sound for sound/items/wearoff.wav
+tty]    ^3WARNING: Failed to load sound sound/items/use_nothing.wav!
+tty]    ^3WARNING: Using default sound for sound/items/use_nothing.wav
+tty]    ^3WARNING: Failed to load sound sound/player/gibsplt1.wav!
+tty]    ^3WARNING: Using default sound for sound/player/gibsplt1.wav
+tty]    ^3WARNING: Failed to load sound sound/player/gibimp1.wav!
+tty]    ^3WARNING: Using default sound for sound/player/gibimp1.wav
+tty]    ^3WARNING: Failed to load sound sound/player/gibimp2.wav!
+tty]    ^3WARNING: Using default sound for sound/player/gibimp2.wav
+tty]    ^3WARNING: Failed to load sound sound/player/gibimp3.wav!
+tty]    ^3WARNING: Using default sound for sound/player/gibimp3.wav
+tty]    ^3WARNING: Failed to load sound sound/world/telein.wav!
+tty]    ^3WARNING: Using default sound for sound/world/telein.wav
+tty]    ^3WARNING: Failed to load sound sound/world/teleout.wav!
+tty]    ^3WARNING: Using default sound for sound/world/teleout.wav
+tty]    ^3WARNING: Failed to load sound sound/items/respawn1.wav!
+tty]    ^3WARNING: Using default sound for sound/items/respawn1.wav
+tty]    ^3WARNING: Failed to load sound sound/weapons/noammo.wav!
+tty]    ^3WARNING: Using default sound for sound/weapons/noammo.wav
+tty]    ^3WARNING: Failed to load sound sound/player/talk.wav!
+tty]    ^3WARNING: Using default sound for sound/player/talk.wav
+tty]    ^3WARNING: Failed to load sound sound/player/land1.wav!
+tty]    ^3WARNING: Using default sound for sound/player/land1.wav
+tty]    ^3WARNING: Failed to load sound sound/feedback/impressive.wav!
+tty]    ^3WARNING: Using default sound for sound/feedback/impressive.wav
+tty]    ^3WARNING: Failed to load sound sound/feedback/excellent.wav!
+tty]    ^3WARNING: Using default sound for sound/feedback/excellent.wav
+tty]    ^3WARNING: Failed to load sound sound/feedback/denied.wav!
+tty]    ^3WARNING: Using default sound for sound/feedback/denied.wav
+tty]    ^3WARNING: Failed to load sound sound/feedback/humiliation.wav!
+tty]    ^3WARNING: Using default sound for sound/feedback/humiliation.wav
+tty]    ^3WARNING: Failed to load sound sound/feedback/assist.wav!
+tty]    ^3WARNING: Using default sound for sound/feedback/assist.wav
+tty]    ^3WARNING: Failed to load sound sound/feedback/defense.wav!
+tty]    ^3WARNING: Using default sound for sound/feedback/defense.wav
+tty]    ^3WARNING: Failed to load sound sound/feedback/takenlead.wav!
+tty]    ^3WARNING: Using default sound for sound/feedback/takenlead.wav
+tty]    ^3WARNING: Failed to load sound sound/feedback/tiedlead.wav!
+tty]    ^3WARNING: Using default sound for sound/feedback/tiedlead.wav
+tty]    ^3WARNING: Failed to load sound sound/feedback/lostlead.wav!
+tty]    ^3WARNING: Using default sound for sound/feedback/lostlead.wav
+tty]    ^3WARNING: Failed to load sound sound/player/watr_in.wav!
+tty]    ^3WARNING: Using default sound for sound/player/watr_in.wav
+tty]    ^3WARNING: Failed to load sound sound/player/watr_out.wav!
+tty]    ^3WARNING: Using default sound for sound/player/watr_out.wav
+tty]    ^3WARNING: Failed to load sound sound/player/watr_un.wav!
+tty]    ^3WARNING: Using default sound for sound/player/watr_un.wav
+tty]    ^3WARNING: Failed to load sound sound/world/jumppad.wav!
+tty]    ^3WARNING: Using default sound for sound/world/jumppad.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/step1.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/step1.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/boot1.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/boot1.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/flesh1.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/flesh1.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/mech1.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/mech1.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/energy1.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/energy1.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/splash1.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/splash1.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/clank1.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/clank1.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/step2.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/step2.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/boot2.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/boot2.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/flesh2.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/flesh2.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/mech2.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/mech2.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/energy2.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/energy2.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/splash2.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/splash2.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/clank2.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/clank2.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/step3.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/step3.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/boot3.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/boot3.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/flesh3.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/flesh3.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/mech3.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/mech3.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/energy3.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/energy3.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/splash3.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/splash3.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/clank3.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/clank3.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/step4.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/step4.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/boot4.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/boot4.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/flesh4.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/flesh4.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/mech4.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/mech4.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/energy4.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/energy4.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/splash4.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/splash4.wav
+tty]    ^3WARNING: Failed to load sound sound/player/footsteps/clank4.wav!
+tty]    ^3WARNING: Using default sound for sound/player/footsteps/clank4.wav
+tty]    ^3WARNING: Failed to load sound sound/misc/ar1_pkup.wav!
+tty]    ^3WARNING: Using default sound for sound/misc/ar1_pkup.wav
+tty]    ^3WARNING: Failed to load sound sound/misc/ar2_pkup.wav!
+tty]    ^3WARNING: Using default sound for sound/misc/ar2_pkup.wav
+tty]    ^3WARNING: Failed to load sound sound/items/s_health.wav!
+tty]    ^3WARNING: Using default sound for sound/items/s_health.wav
+tty]    ^3WARNING: Failed to load sound sound/items/n_health.wav!
+tty]    ^3WARNING: Using default sound for sound/items/n_health.wav
+tty]    ^3WARNING: Failed to load sound sound/items/l_health.wav!
+tty]    ^3WARNING: Using default sound for sound/items/l_health.wav
+tty]    ^3WARNING: Failed to load sound sound/items/m_health.wav!
+tty]    ^3WARNING: Using default sound for sound/items/m_health.wav
+tty]    ^3WARNING: Failed to load sound sound/misc/w_pkup.wav!
+tty]    ^3WARNING: Using default sound for sound/misc/w_pkup.wav
+tty]    ^3WARNING: Failed to load sound sound/weapons/grenade/hgrenb1a.wav!
+tty]    ^3WARNING: Using default sound for sound/weapons/grenade/hgrenb1a.wav
+tty]    ^3WARNING: Failed to load sound sound/weapons/grenade/hgrenb2a.wav!
+tty]    ^3WARNING: Using default sound for sound/weapons/grenade/hgrenb2a.wav
+tty]    ^3WARNING: Failed to load sound sound/misc/am_pkup.wav!
+tty]    ^3WARNING: Using default sound for sound/misc/am_pkup.wav
+tty]    ^3WARNING: Failed to load sound sound/items/holdable.wav!
+tty]    ^3WARNING: Using default sound for sound/items/holdable.wav
+tty]    ^3WARNING: Failed to load sound sound/items/use_medkit.wav!
+tty]    ^3WARNING: Using default sound for sound/items/use_medkit.wav
+tty]    ^3WARNING: Failed to load sound sound/items/quaddamage.wav!
+tty]    ^3WARNING: Using default sound for sound/items/quaddamage.wav
+tty]    ^3WARNING: Failed to load sound sound/items/damage2.wav!
+tty]    ^3WARNING: Using default sound for sound/items/damage2.wav
+tty]    ^3WARNING: Failed to load sound sound/items/damage3.wav!
+tty]    ^3WARNING: Using default sound for sound/items/damage3.wav
+tty]    ^3WARNING: Failed to load sound sound/items/protect.wav!
+tty]    ^3WARNING: Using default sound for sound/items/protect.wav
+tty]    ^3WARNING: Failed to load sound sound/items/airout.wav!
+tty]    ^3WARNING: Using default sound for sound/items/airout.wav
+tty]    ^3WARNING: Failed to load sound sound/items/protect3.wav!
+tty]    ^3WARNING: Using default sound for sound/items/protect3.wav
+tty]    ^3WARNING: Failed to load sound sound/items/haste.wav!
+tty]    ^3WARNING: Using default sound for sound/items/haste.wav
+tty]    ^3WARNING: Failed to load sound sound/items/invisibility.wav!
+tty]    ^3WARNING: Using default sound for sound/items/invisibility.wav
+tty]    ^3WARNING: Failed to load sound sound/items/regeneration.wav!
+tty]    ^3WARNING: Using default sound for sound/items/regeneration.wav
+tty]    ^3WARNING: Failed to load sound sound/items/regen.wav!
+tty]    ^3WARNING: Using default sound for sound/items/regen.wav
+tty]    ^3WARNING: Failed to load sound sound/items/flight.wav!
+tty]    ^3WARNING: Using default sound for sound/items/flight.wav
+tty]    ^3WARNING: Failed to load sound sound/player/fry.wav!
+tty]    ^3WARNING: Using default sound for sound/player/fry.wav
+tty]    ^3WARNING: Failed to load sound sound/movers/doors/dr1_strt.wav!
+tty]    ^3WARNING: Using default sound for sound/movers/doors/dr1_strt.wav
+tty]    ^3WARNING: Failed to load sound sound/movers/doors/dr1_end.wav!
+tty]    ^3WARNING: Using default sound for sound/movers/doors/dr1_end.wav
+tty]    ^3WARNING: Failed to load sound sound/movers/switches/butn2.wav!
+tty]    ^3WARNING: Using default sound for sound/movers/switches/butn2.wav
+tty]    ^3WARNING: Failed to load sound sound/weapons/machinegun/ric1.wav!
+tty]    ^3WARNING: Using default sound for sound/weapons/machinegun/ric1.wav
+tty]    ^3WARNING: Failed to load sound sound/weapons/machinegun/ric2.wav!
+tty]    ^3WARNING: Using default sound for sound/weapons/machinegun/ric2.wav
+tty]    ^3WARNING: Failed to load sound sound/weapons/machinegun/ric3.wav!
+tty]    ^3WARNING: Using default sound for sound/weapons/machinegun/ric3.wav
+tty]    ^3WARNING: Failed to load sound sound/weapons/rocket/rocklx1a.wav!
+tty]    ^3WARNING: Using default sound for sound/weapons/rocket/rocklx1a.wav
+tty]    ^3WARNING: Failed to load sound sound/weapons/plasma/plasmx1a.wav!
+tty]    ^3WARNING: Using default sound for sound/weapons/plasma/plasmx1a.wav
+tty]    stitched 0 LoD cracks
+tty]    ...loaded 23 faces, 0 meshes, 0 trisurfs, 0 flares
+tty]    ^3WARNING: Failed to load sound sound/weapons/melee/fstrun.wav!
+tty]    ^3WARNING: Using default sound for sound/weapons/melee/fstrun.wav
+tty]    ^3WARNING: Failed to load sound sound/weapons/melee/fstatck.wav!
+tty]    ^3WARNING: Using default sound for sound/weapons/melee/fstatck.wav
+tty]    ^3WARNING: Failed to load sound sound/weapons/machinegun/machgf1b.wav!
+tty]    ^3WARNING: Using default sound for sound/weapons/machinegun/machgf1b.wav
+tty]    ^3WARNING: Failed to load sound sound/weapons/machinegun/machgf2b.wav!
+tty]    ^3WARNING: Using default sound for sound/weapons/machinegun/machgf2b.wav
+tty]    ^3WARNING: Failed to load sound sound/weapons/machinegun/machgf3b.wav!
+tty]    ^3WARNING: Using default sound for sound/weapons/machinegun/machgf3b.wav
+tty]    ^3WARNING: Failed to load sound sound/weapons/machinegun/machgf4b.wav!
+tty]    ^3WARNING: Using default sound for sound/weapons/machinegun/machgf4b.wav
+tty]    ^3WARNING: Failed to load sound sound/player/sarge/death1.wav!
+tty]    ^3WARNING: Using default sound for sound/player/sarge/death1.wav
+tty]    ^3WARNING: Failed to load sound sound/player/sarge/death2.wav!
+tty]    ^3WARNING: Using default sound for sound/player/sarge/death2.wav
+tty]    ^3WARNING: Failed to load sound sound/player/sarge/death3.wav!
+tty]    ^3WARNING: Using default sound for sound/player/sarge/death3.wav
+tty]    ^3WARNING: Failed to load sound sound/player/sarge/jump1.wav!
+tty]    ^3WARNING: Using default sound for sound/player/sarge/jump1.wav
+tty]    ^3WARNING: Failed to load sound sound/player/sarge/pain25_1.wav!
+tty]    ^3WARNING: Using default sound for sound/player/sarge/pain25_1.wav
+tty]    ^3WARNING: Failed to load sound sound/player/sarge/pain50_1.wav!
+tty]    ^3WARNING: Using default sound for sound/player/sarge/pain50_1.wav
+tty]    ^3WARNING: Failed to load sound sound/player/sarge/pain75_1.wav!
+tty]    ^3WARNING: Using default sound for sound/player/sarge/pain75_1.wav
+tty]    ^3WARNING: Failed to load sound sound/player/sarge/pain100_1.wav!
+tty]    ^3WARNING: Using default sound for sound/player/sarge/pain100_1.wav
+tty]    ^3WARNING: Failed to load sound sound/player/sarge/falling1.wav!
+tty]    ^3WARNING: Using default sound for sound/player/sarge/falling1.wav
+tty]    ^3WARNING: Failed to load sound sound/player/sarge/gasp.wav!
+tty]    ^3WARNING: Using default sound for sound/player/sarge/gasp.wav
+tty]    ^3WARNING: Failed to load sound sound/player/sarge/drown.wav!
+tty]    ^3WARNING: Using default sound for sound/player/sarge/drown.wav
+tty]    ^3WARNING: Failed to load sound sound/player/sarge/fall1.wav!
+tty]    ^3WARNING: Using default sound for sound/player/sarge/fall1.wav
+tty]    ^3WARNING: Failed to load sound sound/player/sarge/taunt.wav!
+tty]    ^3WARNING: Using default sound for sound/player/sarge/taunt.wav
+tty]    CL_InitCGame:  0.04 seconds
+tty]    1 msec to draw all images
+tty]    Com_TouchMemory: 0 msec
+tty]    UnnamedPlayer^7 entered the game
+tty]    ----- Server Shutdown (Server disconnected) -----
+tty]    ==== ShutdownGame ====
+tty]    ---------------------------
+tty]    RE_Shutdown( 0 )
+tty]    ------- FBO_Shutdown -------
+tty]    ------- R_ShutdownVaos -------
+tty]    ------- GLSL_ShutdownGPUShaders -------
+tty]    Hunk_Clear: reset the hunk ok
+tty]    ----- R_Init -----
+tty]    ------- FBO_Init -------
+tty]    ------- GLSL_InitGPUShaders -------
+tty]    Using GPU vertex animation
+tty]    loaded 115 GLSL shaders (48 gen 42 light 25 etc) in  0.02 seconds
+tty]    ------- R_InitVaos -------
+tty]    Initializing Shaders
+tty]    
+GL_VENDOR: AMD
+tty]    GL_RENDERER: AMD Radeon RX 7800 XT (radeonsi, navi32, ACO, DRM 3.64, 7.2.7-zen1-1-zen)
+tty]    GL_VERSION: 4.6 (Core Profile) Mesa 26.2.3-arch1.1
+tty]    GL_EXTENSIONS: GL_AMD_conservative_depth GL_AMD_depth_clamp_separate GL_AMD_draw_buffers_blend GL_AMD_gpu_shader_int64 GL_AMD_multi_draw_indirect GL_AMD_pinned_memory GL_AMD_query_buffer_object GL_AMD_seamless_cubemap_per_texture GL_AMD_shader_stencil_export GL_AMD_shader_trinary_minmax GL_AMD_texture_texture4 GL_AMD_vertex_shader_layer GL_AMD_vertex_shader_viewport_index GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ARB_ES2_compatibility GL_ARB_ES3_1_compatibility GL_ARB_ES3_2_compatibility GL_ARB_ES3_compatibility GL_ARB_arrays_of_arrays GL_ARB_base_instance GL_ARB_bindless_texture GL_ARB_blend_func_extended GL_ARB_buffer_storage GL_ARB_clear_buffer_object GL_ARB_clear_texture GL_ARB_clip_control GL_ARB_color_buffer_float GL_ARB_compressed_texture_pixel_storage GL_ARB_compute_shader GL_ARB_compute_variable_group_size GL_ARB_conditional_render_inverted GL_ARB_conservative_depth GL_ARB_copy_buffer GL_ARB_copy_image GL_ARB_cull_distance GL_ARB_debug_output GL_ARB_depth_buffer_float GL_ARB_depth_clamp GL_ARB_derivative_control GL_ARB_direct_state_access GL_ARB_draw_buffers GL_ARB_draw_buffers_blend GL_ARB_draw_elements_base_vertex GL_ARB_draw_indirect GL_ARB_draw_instanced GL_ARB_enhanced_layouts GL_ARB_explicit_attrib_location GL_ARB_explicit_uniform_location GL_ARB_fragment_coord_conventions GL_ARB_fragment_layer_viewport GL_ARB_fragment_shader GL_ARB_framebuffer_no_attachments GL_ARB_framebuffer_object GL_ARB_framebuffer_sRGB GL_ARB_get_program_binary GL_ARB_get_texture_sub_image GL_ARB_gl_spirv GL_ARB_gpu_shader5 GL_ARB_gpu_shader_fp64 GL_ARB_gpu_shader_int64 GL_ARB_half_float_pixel GL_ARB_half_float_vertex GL_ARB_indirect_parameters GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_internalformat_query2 GL_ARB_invalidate_subdata GL_ARB_map_buffer_alignment GL_ARB_map_buffer_range GL_ARB_multi_bind GL_ARB_multi_draw_indirect GL_ARB_occlusion_query2 GL_ARB_parallel_shader_compile GL_ARB_pipeline_statistics_query GL_ARB_pixel_buffer_object GL_ARB_point_sprite GL_ARB_polygon_offset_clamp GL_ARB_post_depth_coverage GL_ARB_program_interface_query GL_ARB_provoking_vertex GL_ARB_query_buffer_object GL_ARB_robust_buffer_access_behavior GL_ARB_robustness GL_ARB_sample_shading GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_seamless_cubemap_per_texture GL_ARB_separate_shader_objects GL_ARB_shader_atomic_counter_ops GL_ARB_shader_atomic_counters GL_ARB_shader_ballot GL_ARB_shader_bit_encoding GL_ARB_shader_clock GL_ARB_shader_draw_parameters GL_ARB_shader_group_vote GL_ARB_shader_image_load_store GL_ARB_shader_image_size GL_ARB_shader_objects GL_ARB_shader_precision GL_ARB_shader_stencil_export GL_ARB_shader_storage_buffer_object GL_ARB_shader_subroutine GL_ARB_shader_texture_image_samples GL_ARB_shader_texture_lod GL_ARB_shader_viewport_layer_array GL_ARB_shading_language_420pack GL_ARB_shading_language_include GL_ARB_shading_language_packing GL_ARB_sparse_buffer GL_ARB_sparse_texture GL_ARB_sparse_texture2 GL_ARB_sparse_texture_clamp GL_ARB_spirv_extensions GL_ARB_stencil_texturing GL_ARB_sync GL_ARB_tessellation_shader GL_ARB_texture_barrier GL_ARB_texture_border_clamp GL_ARB_texture_buffer_object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map_array GL_ARB_texture_filter_anisotropic GL_ARB_texture_filter_minmax GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_stencil8 GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_transform_feedback_overflow_query GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ATI_blend_equation_separate GL_ATI_meminfo GL_ATI_texture_float GL_ATI_texture_mirror_once GL_EXT_EGL_image_storage GL_EXT_EGL_image_storage_compression GL_EXT_EGL_sync GL_EXT_abgr GL_EXT_blend_equation_separate GL_EXT_debug_label GL_EXT_demote_to_helper_invocation GL_EXT_depth_bounds_test GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_memory_object GL_EXT_memory_object_fd GL_EXT_mesh_shader GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_pixel_buffer_object GL_EXT_polygon_offset_clamp GL_EXT_provoking_vertex GL_EXT_semaphore GL_EXT_semaphore_fd GL_EXT_shader_clock GL_EXT_shader_image_load_formatted GL_EXT_shader_image_load_store GL_EXT_shader_integer_mix GL_EXT_texture_array GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_filter_anisotropic GL_EXT_texture_filter_minmax GL_EXT_texture_integer GL_EXT_texture_mirror_clamp GL_EXT_texture_sRGB GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_RG8 GL_EXT_texture_sRGB_decode GL_EXT_texture_shadow_lod GL_EXT_texture_shared_exponent GL_EXT_texture_snorm GL_EXT_texture_storage GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_EXT_window_rectangles GL_IBM_multimode_draw_arrays GL_INTEL_blackhole_render GL_KHR_blend_equation_advanced GL_KHR_context_flush_control GL_KHR_debug GL_KHR_no_error GL_KHR_parallel_shader_compile GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_KHR_shader_subgroup GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_sliced_3d GL_MESA_framebuffer_flip_y GL_MESA_pack_invert GL_MESA_shader_integer_functions GL_MESA_texture_const_bandwidth GL_MESA_texture_signed_rgba GL_NVX_gpu_memory_info GL_NV_alpha_to_coverage_dither_control GL_NV_compute_shader_derivatives GL_NV_conditional_render GL_NV_copy_image GL_NV_depth_clamp GL_NV_packed_depth_stencil GL_NV_shader_atomic_int64 GL_NV_texture_barrier GL_NV_timeline_semaphore GL_OES_EGL_image GL_S3_s3tc 
+tty]    GL_MAX_TEXTURE_SIZE: 16384
+tty]    GL_MAX_TEXTURE_IMAGE_UNITS: 32
+tty]    
+PIXELFORMAT: color(24-bits) Z(24-bit) stencil(8-bits)
+tty]    MODE: 4, 800 x 600 windowed hz:N/A
+tty]    GAMMA: software w/ 1 overbright bits
+tty]    texturemode: GL_LINEAR_MIPMAP_LINEAR
+tty]    picmip: 1
+tty]    texture bits: 0
+tty]    compiled vertex arrays: disabled
+tty]    texenv add: enabled
+tty]    compressed textures: disabled
+tty]    ----- finished R_Init -----
+tty]    Loading vm file vm/ui.qvm...
+tty]    File "vm/ui.qvm" found at "./reach"
+tty]    ...which has vmMagic VM_MAGIC_VER2
+tty]    Loading 49 jump table targets
+tty]    VM file ui compiled to 173866 bytes of code
+tty]    ui loaded in 415296 bytes on the hunk
+tty]    ui: 800x600 white=10 charset=11 pulse=12 scroll=13 cube=1
+tty]    ----- Client Shutdown (Client quit) -----
+tty]    RE_Shutdown( 1 )
+tty]    ------- FBO_Shutdown -------
+tty]    ------- R_ShutdownVaos -------
+tty]    ------- GLSL_ShutdownGPUShaders -------
+tty]    Hunk_Clear: reset the hunk ok
+tty]    OpenAL capture device closed.
+tty]    -----------------------
+tty]    

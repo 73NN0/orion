@@ -1,37 +1,44 @@
+/*
+ * ui_local.h - l'état privé de l'UI d'Orion.
+ */
 #ifndef ORION_UI_LOCAL_H
 #define ORION_UI_LOCAL_H
 
 #include "../../engine/code/qcommon/q_shared.h"
 #include "../../engine/code/renderercommon/tr_types.h"
 #include "../../engine/code/ui/ui_public.h"
+#include "../../engine/code/client/keycodes.h"
 
-typedef struct {
-    glconfig_t glconfig;
-    qhandle_t whiteShader;
-    int realtime;
-    int frametime;
-} uiState_t;
+#include "ui_trap.h"
 
-extern uiState_t uis;
+struct ui_state {
+	glconfig_t glconfig;
+	qhandle_t white;	/* pinceau : blanc × couleur courante */
+	qhandle_t charset;	/* grille 16 × 16 de glyphes */
+	qhandle_t pulse;	/* matériau animé par son script */
+	qhandle_t scroll;	/* idem, défilement de texture */
+	qhandle_t cube;		/* models/orion/cube.md3 */
+	sfxHandle_t click;
+	int realtime;
+	int frametime;
+	float cursor_x;		/* le moteur n'envoie que des deltas */
+	float cursor_y;
+	int menu;		/* UIMENU_NONE, UIMENU_MAIN, UIMENU_INGAME */
+	int hot;		/* bouton sous le curseur, -1 sinon */
+};
 
-void
-trap_Print(const char *string);
-void
-trap_Error(const char *string);
-void
-trap_GetGlconfig(glconfig_t *glconfig);
-qhandle_t
-trap_R_RegisterShaderNoMip(const char *name);
-void
-trap_R_SetColor(const float *rgba);
-void
-trap_R_DrawStretchPic(float x, float y, float w, float h, float s1, float t1, float s2, float t2,
-    qhandle_t shader);
+extern struct ui_state uis;
 
-void
-trap_Key_SetCatcher(int catcher);
+/* ui_draw.c */
+void UI_FillRect(float x, float y, float w, float h, const vec4_t color);
+void UI_DrawPic(float x, float y, float w, float h, qhandle_t shader);
+void UI_DrawChar(float x, float y, float size, int ch);
+void UI_DrawString(float x, float y, float size, const char *s,
+		   const vec4_t color);
+qboolean UI_PointInRect(float px, float py,
+			float x, float y, float w, float h);
 
-int
-trap_Key_GetCatcher(void);
+/* ui_scene.c */
+void UI_DrawCube(float x, float y, float w, float h);
 
-#endif
+#endif /* ORION_UI_LOCAL_H */
