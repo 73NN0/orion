@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=https://json.schemastore.org/clangd.json
+CompileFlags:
+  Add:
+    - -xc
+    - -std=c11
+    # warnings
+    - -Wall
+    - -Wextra
+    - -Wpedantic
+    - -Wshadow
+    - -Wcast-align
+    - -Wunused
+    - -Wold-style-definition
+    - -Wmissing-prototypes
+    - -Wno-unused-parameter
+    - -Werror
+    - -Wstrict-prototypes
+    - -Wpointer-arith
+    - -Wwrite-strings
+    - -Wconversion
+    - -Wformat=2
+    - -Wformat-security
+    - -Wunreachable-code
+    - -Wundef
+    - -Wbad-function-cast
+    - -Wdouble-promotion
+    - -Wmissing-include-dirs
+    - -Winit-self
+    - -Wmissing-noreturn
+    # hardening
+    - -fno-common
+    - -fstack-protector-strong
+    # suppress false positives from clangd analyzing headers as standalone TUs
+    - -Wno-empty-translation-unit
