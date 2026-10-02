@@ -8,8 +8,8 @@ BUILD     := bin/$(MODE)/$(PLATFORM)
 OBJ_DIR   := $(BUILD)/obj
 LIB_DIR   := $(BUILD)/lib
 PKGS = 
-
-CPPFLAGS  := -Isys/include/sys -Isys/include -I$(PLATFORM)
+# -Isys/include/sys
+CPPFLAGS  :=  -Isys/include -I$(PLATFORM)
 CFLAGS := -std=c11
 CFLAGS += -Wall -Wextra -Wpedantic
 CFLAGS += -Wshadow -Wcast-align -Wunused
@@ -32,9 +32,13 @@ else
 endif
 
 # pkg-config bits (only computed once)
+ifneq ($(strip $(PKGS)),)
 PKG_CFLAGS := $(shell pkg-config --cflags $(PKGS))
 PKG_LIBS   := $(shell pkg-config --libs $(PKGS))
-
+else
+PKG_CFLAGS :=
+PKG_LIBS   :=
+endif
 CPPFLAGS += $(PKG_CFLAGS)
 # need to be include 1 time 
 

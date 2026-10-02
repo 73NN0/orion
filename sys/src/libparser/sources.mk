@@ -1,3 +1,3 @@
 LIB := parser
-SRCS := sys/src/parser/lexer.c
-TESTS := lexer_test.c
+SRCS := sys/src/libparser/lexer.c
+TESTS := sys/src/libparser/lexer_test.c

@@ -1,3 +1,5 @@
+struct arena;
+
 
 enum tokenKind {
 	TOKEN_EOF,
@@ -6,7 +8,9 @@ enum tokenKind {
 	TOKEN_LBRACE,
 	TOKEN_RBRACE,
 	TOKEN_ERROR,
+	TOKEN_COUNT,
 };
+
 
 struct span {
 const char *data;
@@ -33,3 +37,15 @@ lexerInit(struct lexer * /* lexer */, const char * /* input*/, uvlong /*length*/
 
 struct token 
 lexerNext(struct lexer *);
+
+/*
+	count >= 1
+	last token => TOKEN_OEF or TOKEN_ERROR
+*/
+struct tokenList {
+	struct token *tokens;
+	uvlong count;
+};
+
+int lexerTokenize(struct arena *, const char *, uvlong,
+    struct tokenList *);
