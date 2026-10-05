@@ -2,7 +2,7 @@
 
 .PHONY: all clean test
 
-LIBS := parser
+LIBS := arena parser
 TARGET := orionctl
 include mk/common.mk
 
