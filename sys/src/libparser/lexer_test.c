@@ -1,7 +1,7 @@
 #include <u.h>
 #include <stdio.h>
 
-#include <lexer.h>
+#include "lexer.h"
 
 #define NELEM(array) ((uvlong)(sizeof(array) / sizeof((array)[0])))
 

@@ -169,6 +169,11 @@ parserExpectWord(struct parser *parser, const char *word, struct parseError *err
 }
 
 static const struct token *
+parserExpectIdent(struct parser *parser, struct parseError *error) {
+    return parserExpect(parser, TOKEN_WORD, error, "not an identifier");
+}
+
+static const struct token *
 parserExpectValue(struct parser *parser, struct parseError *error) {
     const struct token *token;
 
@@ -209,70 +214,6 @@ configStringCopy(struct arena *permanent, struct configString *destination, stru
     return 1;
 }
 
-static int
-parsePathOperation(struct parser *parser, struct arena *permanent, struct arena *scratch,
-    struct opList *opList, struct parseError *error, enum configOperationKind kind) {
-    const struct token *source;
-    const struct token *destination;
-    struct configOperation operation = {0};
-
-    source = parserExpectValue(parser, error);
-    if (source == nil)
-        return 0;
-    destination = parserExpectValue(parser, error);
-    if (destination == nil)
-        return 0;
-
-    operation.kind = kind;
-
-    switch (kind) {
-    case CONFIG_OPERATION_COPY:
-        if (!configStringCopy(permanent, &operation.data.copy.source, source->text)
-            || !configStringCopy(permanent, &operation.data.copy.destination, destination->text))
-            return parserFail(error, source, "out of memory");
-        break;
-    case CONFIG_OPERATION_COPY_TREE:
-        if (!configStringCopy(permanent, &operation.data.copyTree.source, source->text)
-            || !configStringCopy(permanent,
-                &operation.data.copyTree.destination,
-                destination->text))
-            return parserFail(error, source, "out of memory");
-        break;
-    default:
-        /* contrat violé, pas une erreur de parsing */
-        return 0;
-    }
-
-    if (!opListAppend(scratch, opList, operation)) {
-        return parserFail(error, source, "out of memory");
-    }
-
-    return 1;
-}
-
-static int
-parseUseOperation(struct parser *parser, struct arena *permanent, struct arena *scratch,
-    struct opList *opList, struct parseError *error, enum configOperationKind kind) {
-    const struct token *name;
-    struct configOperation operation;
-    operation.kind = kind;
-
-    name = parserExpectValue(parser, error);
-    if (name == nil) {
-        return 0;
-    }
-
-    if (!configStringCopy(permanent, &operation.data.use.templateName, name->text)) {
-        return parserFail(error, name, "out of memory");
-    }
-
-    if (!opListAppend(scratch, opList, operation)) {
-        return parserFail(error, name, "out of memory");
-    }
-
-    return 1;
-}
-
 enum argKind {
     ARG_VALUE, /* TOKEN_WORD, TOKEN_STRING */
     ARG_IDENT, /* TOKEN_WORD */
@@ -285,40 +226,86 @@ struct directive {
     enum argKind args[2];
 };
 
-static const struct directive directives[]
-    = {{"copy", CONFIG_OPERATION_COPY, 2, {ARG_VALUE, ARG_VALUE}},
-        {"copy-tree", CONFIG_OPERATION_COPY_TREE, 2, {ARG_VALUE, ARG_VALUE}},
-        {"use", CONFIG_OPERATION_USE, 1, {ARG_IDENT}},
-        {nil, 0, 0, {0}}};
+static const struct directive directives[] = {
+    {"copy", CONFIG_OPERATION_COPY, 2, {ARG_VALUE, ARG_VALUE}},
+    {"copy-tree", CONFIG_OPERATION_COPY_TREE, 2, {ARG_VALUE, ARG_VALUE}},
+    {"use", CONFIG_OPERATION_USE, 1, {ARG_IDENT}},
+    {nil, 0, 0, {0}},
+};
 
 static int
 parseOperation(struct parser *parser, struct arena *permanent, struct arena *scratch,
     struct opList *opList, struct parseError *error) {
-    const struct token *keyword;
+    struct configString slots[2];
+    const struct directive *d;
 
-    keyword = parserPeek(parser);
-    // maybe later loop
-    if (parserCheckWord(parser, "copy")) {
-        parserAdvance(parser);
-        return parsePathOperation(parser, permanent, scratch, opList, error, CONFIG_OPERATION_COPY);
-    }
-    if (parserCheckWord(parser, "copy-tree")) {
-        parserAdvance(parser);
-        return parsePathOperation(parser,
-            permanent,
-            scratch,
-            opList,
-            error,
-            CONFIG_OPERATION_COPY_TREE);
-    }
-    if (parserCheckWord(parser, "use")) {
-        parserAdvance(parser);
-        return parseUseOperation(parser, permanent, scratch, opList, error, CONFIG_OPERATION_USE);
+    const struct token *keyword = parserPeek(parser);
+
+    if (keyword->kind != TOKEN_WORD) {
+        return parserFail(error,
+            keyword,
+            keyword->kind == TOKEN_ERROR ? "invalid token" : "expected copy, copy-tree, use, or }");
     }
 
-    return parserFail(error,
-        keyword,
-        keyword->kind == TOKEN_ERROR ? "invalid token" : "expected copy, copy-tree, use, or }");
+    /* Chercher la directive correspondante dans la table. */
+    for (d = directives; d->keyword != nil; d++) {
+        if (spanEquals(keyword->text, d->keyword)) {
+            break;
+        }
+    }
+
+    /* Aucune directive ne correspond : mot-clé inconnu. */
+    if (d->keyword == nil) {
+        return parserFail(error, keyword, "unknown operation");
+    }
+
+    /* consomme le mot-clé */
+    parserAdvance(parser);
+
+    for (int i = 0; i < d->arity; i++) {
+        const struct token *t = nil;
+
+        switch (d->args[i]) {
+        case ARG_VALUE:
+            t = parserExpectValue(parser, error);
+            break;
+        case ARG_IDENT:
+            t = parserExpectIdent(parser, error);
+            break;
+        }
+
+        if (t == nil) {
+            return 0;
+        }
+
+        if (!configStringCopy(permanent, &slots[i], t->text)) {
+            return parserFail(error, t, "out of memory");
+        }
+    }
+
+    struct configOperation op = {0};
+    op.kind = d->kind;
+
+    switch (d->kind) {
+    case CONFIG_OPERATION_COPY:
+    case CONFIG_OPERATION_COPY_TREE:
+        op.data.path.source = slots[0];
+        op.data.path.destination = slots[1];
+        break;
+    case CONFIG_OPERATION_USE:
+        op.data.use.templateName = slots[0];
+        break;
+
+    case CONFIG_OPERATION_COUNT:
+    default:
+        /* cannot append only here to sastify clang */
+        return 0;
+    }
+
+    if (!opListAppend(scratch, opList, op)) {
+        return parserFail(error, keyword, "out of memory");
+    }
+    return 1;
 }
 
 static int
@@ -505,10 +492,11 @@ parseDocument(struct parser *parser, struct arena *permanent, struct arena *scra
 }
 
 int
-parserParse(struct arena *permanent, struct arena *scratch, const struct tokenList *tokens,
+parserParse(struct arena *permanent, struct arena *scratch, const char *text, uvlong length,
     struct config *config, struct parseError *error) {
     struct parser parser;
     struct templateList tmpList = {0};
+    struct tokenList tokens;
     uvlong mark;
 
     config->templates = nil;
@@ -517,20 +505,27 @@ parserParse(struct arena *permanent, struct arena *scratch, const struct tokenLi
     error->line = 0;
     error->column = 0;
 
-    if (tokens->tokens[tokens->count - 1].kind != TOKEN_EOF
-        && tokens->tokens[tokens->count - 1].kind != TOKEN_ERROR) {
+    /* Lex the input into scratch. Tokens live in scratch and will be
+     * discarded when the caller rewinds it after parserParse returns. */
+    if (!lexerTokenize(scratch, text, length, &tokens)) {
+        error->message = "lexer failure";
+        return 0;
+    }
+
+    if (tokens.count == 0
+        || (tokens.tokens[tokens.count - 1].kind != TOKEN_EOF
+            && tokens.tokens[tokens.count - 1].kind != TOKEN_ERROR)) {
         error->message = "invalid token list";
         return 0;
     }
 
     mark = arenaGetPos(permanent);
-    parserInit(&parser, tokens);
+    parserInit(&parser, &tokens);
 
     if (!parseDocument(&parser, permanent, scratch, &tmpList, error)) {
         goto fail;
     }
 
-    /* Empty file is syntactically valid: no templates, no error. */
     if (tmpList.count == 0) {
         return 1;
     }

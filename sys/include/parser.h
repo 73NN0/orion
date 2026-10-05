@@ -5,7 +5,6 @@
  */
 
 struct arena;
-struct tokenlist;
 
 struct configString {
     char *data;
@@ -55,5 +54,5 @@ struct parseError {
 };
 
 int
-parserParse(struct arena *permanent, struct arena *scratch, const struct tokenList *tokens,
+parserParse(struct arena *permanent, struct arena *scratch, const char *text, uvlong length,
     struct config *config, struct parseError *error);
